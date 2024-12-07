@@ -1,0 +1,56 @@
+﻿@page
+@model ksiegarnia_backend.Pages.Account.LoginRegisterModel
+@{
+}
+
+<div class="container border" style="padding:40px">
+    <div class="row">
+    
+        <div class="col-md-6">
+            <h3>Login</h3>
+            <form method="post">
+                <input type="hidden" name="action" value="login" />
+                <div class="form-group row">
+                    <label asp-for="LoginCredentials.Email" class="col-3">Email</label>
+                    <div class="col-9">
+                        <input asp-for="LoginCredentials.Email" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="LoginCredentials.Password" class="col-3">Password</label>
+                    <div class="col-9">
+                        <input asp-for="LoginCredentials.Password" class="form-control" type="password" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+
+   
+        <div class="col-md-6">
+            <h3>Register</h3>
+            <form method="post">
+                <input type="hidden" name="action" value="register" />
+                <div class="form-group row">
+                    <label asp-for="RegisterCredentials.Username" class="col-3">Username</label>
+                    <div class="col-9">
+                        <input asp-for="RegisterCredentials.Username" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="RegisterCredentials.Email" class="col-3">Email</label>
+                    <div class="col-9">
+                        <input asp-for="RegisterCredentials.Email" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="RegisterCredentials.Password" class="col-3">Password</label>
+                    <div class="col-9">
+                        <input asp-for="RegisterCredentials.Password" class="form-control" type="password" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Register</button>
+            </form>
+        </div>
+    </div>
+</div>

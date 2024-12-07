@@ -227,6 +227,10 @@ namespace ksiegarnia_backend.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
