@@ -20,8 +20,9 @@ namespace ksiegarnia_backend.Pages.Account
         [BindProperty]
         public Credencial RegisterCredentials { get; set; } = new();
 
-        public void OnGet()
+        public void OnGet() 
         {
+
         }
 
         public async Task<IActionResult> OnPostAsync()

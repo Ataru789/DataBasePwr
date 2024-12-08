@@ -12,8 +12,8 @@ using ksiegarnia_backend.Data;
 namespace ksiegarnia_backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241203174040_usunieciewieku")]
-    partial class usunieciewieku
+    [Migration("20241207222450_1")]
+    partial class _1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -227,6 +227,10 @@ namespace ksiegarnia_backend.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("longtext");
 

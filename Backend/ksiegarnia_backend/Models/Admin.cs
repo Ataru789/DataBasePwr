@@ -6,6 +6,7 @@ namespace ksiegarnia_backend.Models
     {
         [Key]
         public int AdminId { get; set; }
+        
         public int UserId { get; set; }
 
     }
