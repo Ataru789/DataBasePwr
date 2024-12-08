@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ksiegarnia_backend.Data;
 
@@ -11,9 +12,11 @@ using ksiegarnia_backend.Data;
 namespace ksiegarnia_backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241208114412_migracja4")]
+    partial class migracja4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,15 +145,13 @@ namespace ksiegarnia_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("OrderId"));
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("OrderId");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                    b.HasIndex("CustomerId");
+                    b.HasKey("OrderId");
 
                     b.ToTable("Orders");
                 });
@@ -166,9 +167,6 @@ namespace ksiegarnia_backend.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(65,30)");
 
@@ -176,10 +174,6 @@ namespace ksiegarnia_backend.Migrations
                         .HasColumnType("smallint");
 
                     b.HasKey("OrderItemId");
-
-                    b.HasIndex("BookId");
-
-                    b.HasIndex("OrderId");
 
                     b.ToTable("OrderItems");
                 });
@@ -203,9 +197,6 @@ namespace ksiegarnia_backend.Migrations
 
                     b.HasKey("ShippingId");
 
-                    b.HasIndex("OrderId")
-                        .IsUnique();
-
                     b.ToTable("ShippingInfos");
                 });
 
@@ -220,15 +211,13 @@ namespace ksiegarnia_backend.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
                     b.Property<short>("Quantity")
                         .HasColumnType("smallint");
 
-                    b.HasKey("CartId");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                    b.HasIndex("CustomerId");
+                    b.HasKey("CartId");
 
                     b.ToTable("ShoppingCarts");
                 });
@@ -291,81 +280,9 @@ namespace ksiegarnia_backend.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ksiegarnia_backend.Models.Order", b =>
-                {
-                    b.HasOne("ksiegarnia_backend.Models.Customer", "Customer")
-                        .WithMany("Orders")
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("ksiegarnia_backend.Models.OrderItem", b =>
-                {
-                    b.HasOne("ksiegarnia_backend.Models.Book", "Book")
-                        .WithMany("OrderItems")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ksiegarnia_backend.Models.Order", "Order")
-                        .WithMany("OrderItems")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Book");
-
-                    b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("ksiegarnia_backend.Models.ShippingInfo", b =>
-                {
-                    b.HasOne("ksiegarnia_backend.Models.Order", "Order")
-                        .WithOne("ShippingInfo")
-                        .HasForeignKey("ksiegarnia_backend.Models.ShippingInfo", "OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("ksiegarnia_backend.Models.ShoppingCart", b =>
-                {
-                    b.HasOne("ksiegarnia_backend.Models.Customer", "Customer")
-                        .WithMany("ShoppingCarts")
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
-                });
-
             modelBuilder.Entity("ksiegarnia_backend.Models.Author", b =>
                 {
                     b.Navigation("Books");
-                });
-
-            modelBuilder.Entity("ksiegarnia_backend.Models.Book", b =>
-                {
-                    b.Navigation("OrderItems");
-                });
-
-            modelBuilder.Entity("ksiegarnia_backend.Models.Customer", b =>
-                {
-                    b.Navigation("Orders");
-
-                    b.Navigation("ShoppingCarts");
-                });
-
-            modelBuilder.Entity("ksiegarnia_backend.Models.Order", b =>
-                {
-                    b.Navigation("OrderItems");
-
-                    b.Navigation("ShippingInfo")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("ksiegarnia_backend.Models.User", b =>

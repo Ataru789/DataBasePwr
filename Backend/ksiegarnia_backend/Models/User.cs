@@ -17,5 +17,11 @@ namespace ksiegarnia_backend.Models
 
         [Required]
         public string Username { get; set; }
+
+        //utworzenie relacji 1:1 z Admin
+        public Admin Admin { get; set; }
+
+        //utworzenie relacji 1:1 z Customer
+        public Customer Customer { get; set; }
     }
 }
