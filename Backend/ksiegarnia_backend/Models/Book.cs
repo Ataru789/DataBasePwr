@@ -8,8 +8,8 @@ namespace ksiegarnia_backend.Models
         [Key]
         public int BookId { get; set; }
         public required string Title { get; set; }
-        public decimal Price { get; set; }
-        public required string Availability { get; set; }
+        public double Price { get; set; }
+        public required int Availability { get; set; }
 
         //utworzenie relacji Author 1:wiele Book
         public int AuthorId { get; set; }

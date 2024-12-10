@@ -64,6 +64,8 @@ namespace ksiegarnia_backend.Data
             .WithOne(e => e.Customer)
             .HasForeignKey(e => e.CustomerId)
             .IsRequired();
+
+
         }
 
     }
