@@ -8,7 +8,11 @@ namespace ksiegarnia_backend.Models
         [Key]
         public int CartId { get; set; }
         public int BookId { get; set; }
-        public int UserId { get; set; }
         public short Quantity { get; set; }
+
+        //utworzenie relacji Customer 1:wiele ShoppingCart
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; } = null!;
+
     }
 }

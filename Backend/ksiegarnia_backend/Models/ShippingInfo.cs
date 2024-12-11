@@ -6,9 +6,12 @@ namespace ksiegarnia_backend.Models
     {
         [Key]
         public int ShippingId { get; set; }
-        public int OrderId { get; set; }
         public  Status ShippingStatus { get; set; }
         public decimal ShippingCost { get; set; }
+
+        //utworzenie relacji Order 1:1 ShippingInfo
+        public int OrderId { get; set; }
+        public Order Order { get; set; } = null!;
     }
 
     public enum Status
