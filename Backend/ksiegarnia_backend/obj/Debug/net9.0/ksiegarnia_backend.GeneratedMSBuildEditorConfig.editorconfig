@@ -24,6 +24,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/BooksUser/IndexUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NVc2VyXEluZGV4VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/Books/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

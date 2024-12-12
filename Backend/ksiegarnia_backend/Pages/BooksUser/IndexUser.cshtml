@@ -1,0 +1,52 @@
+﻿@page
+@using ksiegarnia_backend.Models
+@model ksiegarnia_backend.Pages.Books.IndexUserModel
+@{
+}
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Book List
+            </h2>
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Availability
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model.BookList)
+        {
+            <tr>
+                <td>
+                    @obj.Title
+                </td>
+                <td>
+                    @obj.Price.ToString("C2")
+                </td>
+                <td>
+                    @obj.Availability
+                </td>
+                <td>
+                    <a asp-page="/books/add" asp-route-id="@obj.BookId" class="btn btn-success mx-2">
+                        <i class="bi bi-pencil"></i> Add to cart
+                    </a>
+            </tr>
+        }
+    </tbody>
+</table>
