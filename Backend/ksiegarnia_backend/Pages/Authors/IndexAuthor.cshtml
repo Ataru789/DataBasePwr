@@ -1,0 +1,61 @@
+﻿@page
+@using ksiegarnia_backend.Models
+@model ksiegarnia_backend.Pages.Authors.IndexAuthorModel
+@{
+}
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Authors List
+            </h2>
+        </div>
+        <div class="col text-end">
+            <a asp-page="/authors/createauthor" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add Author
+            </a>
+        </div>
+    </div>
+</div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    AuthorId
+                </th>
+                <th>
+                    FirstName
+                </th>
+                <th>
+                    LastName
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.AuthorList)
+            {
+                <tr>
+                    <td>
+                        @obj.AuthorId
+                    </td>
+                    <td>
+                        @obj.FirstName
+                    </td>
+                    <td>
+                        @obj.LastName
+                    </td>
+                    <td>
+                        <a asp-page="/authors/editauthor" asp-route-id="@obj.AuthorId" class="btn btn-primary mx-2">
+                            <i class="bi bi-pencil"></i> Edit
+                        </a>
+                        <a asp-page="/authors/deleteauthor" asp-route-id="@obj.AuthorId" class="btn btn-danger">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

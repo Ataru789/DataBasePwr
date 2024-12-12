@@ -24,6 +24,22 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/Authors/CreateAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yc1xDcmVhdGVBdXRob3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/Authors/DeleteAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yc1xEZWxldGVBdXRob3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/Authors/EditAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yc1xFZGl0QXV0aG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/Authors/IndexAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yc1xJbmRleEF1dGhvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/BooksUser/IndexUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NVc2VyXEluZGV4VXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
