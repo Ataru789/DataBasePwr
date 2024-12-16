@@ -21,6 +21,9 @@
                 Title
             </th>
             <th>
+                Author
+            </th>
+            <th>
                 Price
             </th>
             <th>
@@ -35,6 +38,9 @@
             <tr>
                 <td>
                     @obj.Title
+                </td>
+                <td>
+                    @obj.Author.FirstName @obj.Author.LastName
                 </td>
                 <td>
                     @obj.Price.ToString("C2")

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ksiegarnia_backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab04eb8613447421c3e27130dc31f047f527cfef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44af9baa13952ffdfcb92965e03c72d80b549cc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ksiegarnia_backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ksiegarnia_backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,7 +15,7 @@ namespace ksiegarnia_backend.Pages.Books
         }
         public void OnGet()
         {
-            BookList = _db.Books.ToList();
+            BookList = _db.Books.Include(b => b.Author).ToList();
         }
     }
 }
