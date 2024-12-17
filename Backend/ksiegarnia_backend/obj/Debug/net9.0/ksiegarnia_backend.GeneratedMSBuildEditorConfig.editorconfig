@@ -40,8 +40,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yc1xJbmRleEF1dGhvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/BooksUser/AddToCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NVc2VyXEFkZFRvQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/BooksUser/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NVc2VyXENhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/BooksUser/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NVc2VyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/BooksUser/IndexUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NVc2VyXEluZGV4VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/BooksUser/Purchase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NVc2VyXFB1cmNoYXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/mikol/source/repos/Backend/ksiegarnia_backend/Pages/Books/Create.cshtml]

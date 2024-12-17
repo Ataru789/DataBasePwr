@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row pt-4 pb-3">
         <div class="col-6">
-            <h2 class="text-primary">
+            <h2 class="text-dark">
                 Book List
             </h2>
         </div>
@@ -22,37 +22,22 @@
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>
-                    Title
-                </th>
-                <th>
-                    Author
-                </th>
-                <th>
-                    Price
-                </th>
-                <th>
-                    Availability
-                </th>
-                <th></th>
+                <th>BookId</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Availability</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var obj in Model.BookList)
             {
                 <tr>
-                    <td>
-                        @obj.Title
-                    </td>
-                     <td>
-                        @obj.Author.FirstName @obj.Author.LastName
-                    </td>   
-                    <td>
-                    @obj.Price.ToString("C2")
-                    </td>
-                    <td>
-                        @obj.Availability
-                    </td>
+                    <th>@obj.BookId</th>
+                    <td>@obj.Title</td>
+                    <td>@obj.Author.FirstName @obj.Author.LastName</td>   
+                    <td>@obj.Price.ToString("C2")</td>
+                    <td>@obj.Availability</td>
                     <td>
                         <a asp-page="/books/edit" asp-route-id="@obj.BookId" class="btn btn-primary mx-2">
                             <i class="bi bi-pencil"></i> Edit
